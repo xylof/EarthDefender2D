@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MeteorsGenerator : MonoBehaviour
@@ -7,17 +5,30 @@ public class MeteorsGenerator : MonoBehaviour
     [SerializeField]
     private Meteor normalMeteorPrefab;
 
+    [SerializeField]
+    private Meteor hardMeteorPrefab;
+
     private void Start()
     {
-        InvokeRepeating("GenerateMeteor", 1f, 2f);
+        InvokeRepeating("GenerateNormalMeteor", 1f, 2f);
+        InvokeRepeating("GenerateHardMeteor", 6f, 5f);
     }
 
-    private void GenerateMeteor()
+    private void GenerateNormalMeteor()
     {
-        int yPosition = Random.Range(-4, 5);
+        int yPosition = Random.Range(-4, 4);
 
         normalMeteorPrefab.transform.position = new Vector3(10, yPosition, 1);
         Meteor meteorClone = Instantiate(normalMeteorPrefab);
+        meteorClone.Move();
+    }
+
+    private void GenerateHardMeteor()
+    {
+        int yPosition = Random.Range(-4, 4);
+
+        hardMeteorPrefab.transform.position = new Vector3(10, yPosition, 1);
+        Meteor meteorClone = Instantiate(hardMeteorPrefab);
         meteorClone.Move();
     }
 }

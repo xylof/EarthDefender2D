@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1529406904863848547}
   - component: {fileID: 1529406904863848544}
-  - component: {fileID: -3465563368166160272}
+  - component: {fileID: -7931883270474008559}
   - component: {fileID: 8498308562717115886}
   - component: {fileID: 6583034602974905263}
   m_Layer: 0
   m_Name: Iron Bullet
-  m_TagString: Untagged
+  m_TagString: IronBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3465563368166160272
+--- !u!114 &-7931883270474008559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,11 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529406904863848545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91f0e5d5701849642acfb39ca48def74, type: 3}
+  m_Script: {fileID: 11500000, guid: ec0bcb9191eb06548b302a054edef4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 8498308562717115886}
-  forceMultiplier: 1.5
+  forceMultiplier: 1
 --- !u!50 &8498308562717115886
 Rigidbody2D:
   serializedVersion: 4

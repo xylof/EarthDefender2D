@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 126487479}
   m_Layer: 0
   m_Name: RightWall
-  m_TagString: Untagged
+  m_TagString: OrdinaryWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38568, g: 0.764151, b: 0.43211982, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 554475823}
   m_Layer: 0
   m_Name: LeftWall
-  m_TagString: Untagged
+  m_TagString: EarthWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -422,7 +422,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8773585, g: 0.34349412, b: 0.34349412, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -569,7 +569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1589a3ade5cf847bad1dacb6d8f839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMeteorPrefab: {fileID: 718472697841410455, guid: f614febe12ba38e419834db896054f16, type: 3}
+  normalMeteorPrefab: {fileID: 4915220555319566477, guid: f614febe12ba38e419834db896054f16, type: 3}
+  hardMeteorPrefab: {fileID: 7942581764308724724, guid: b08c5e9f8984e274aae63d495b780f9a, type: 3}
 --- !u!4 &816919836
 Transform:
   m_ObjectHideFlags: 0
@@ -598,7 +599,7 @@ GameObject:
   - component: {fileID: 940828412}
   m_Layer: 0
   m_Name: SpaceShip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -680,8 +681,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e6889eab22646448759cc6bd61bd4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalBulletPrefab: {fileID: 4230043920804113865, guid: 1421e0d70b6993f4788c54279c1b51b8, type: 3}
-  ironBulletPrefab: {fileID: -3465563368166160272, guid: 17231a94be2324546b3c3235ce14f1d6, type: 3}
+  normalBulletPrefab: {fileID: 2863078803258221047, guid: 1421e0d70b6993f4788c54279c1b51b8, type: 3}
+  ironBulletPrefab: {fileID: -7931883270474008559, guid: 17231a94be2324546b3c3235ce14f1d6, type: 3}
 --- !u!50 &940828412
 Rigidbody2D:
   serializedVersion: 4
@@ -716,7 +717,7 @@ GameObject:
   - component: {fileID: 1116307812}
   m_Layer: 0
   m_Name: LowerWall
-  m_TagString: Untagged
+  m_TagString: OrdinaryWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -776,7 +777,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38431373, g: 0.7647059, b: 0.43137255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -825,7 +826,7 @@ GameObject:
   - component: {fileID: 1926758222}
   m_Layer: 0
   m_Name: UpperWall
-  m_TagString: Untagged
+  m_TagString: OrdinaryWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -885,7 +886,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38431373, g: 0.7647059, b: 0.43137255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
