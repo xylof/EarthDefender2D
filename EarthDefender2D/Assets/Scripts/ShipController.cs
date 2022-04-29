@@ -5,10 +5,13 @@ public class ShipController : MonoBehaviour
     [SerializeField]
     private Bullet normalBulletPrefab;
 
+    [SerializeField]
+    private Bullet ironBulletPrefab;
+
     public void Update()
     {
         MoveShip();
-        Shoot(normalBulletPrefab);
+        Shoot();
     }
 
     private void MoveShip()
@@ -20,11 +23,16 @@ public class ShipController : MonoBehaviour
             transform.position += Vector3.down * Time.deltaTime * 10f;
     }
 
-    private void Shoot(Bullet bullet)
+    private void Shoot()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Bullet bulletClone = CreateBullet(bullet);
+            Bullet bulletClone = CreateBullet(normalBulletPrefab);
+            bulletClone.Move();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Bullet bulletClone = CreateBullet(ironBulletPrefab);
             bulletClone.Move();
         }
     }
