@@ -1,0 +1,83 @@
+# =============== #
+# Unity generated #
+# =============== #
+/EarthDefender2D/[Ll]ibrary/
+/EarthDefender2D/[Tt]emp/
+/EarthDefender2D/[Oo]bj/
+/EarthDefender2D/[Bb]uild/
+/EarthDefender2D/[Bb]uilds/
+/EarthDefender2D/[Ll]ogs/
+/EarthDefender2D/Assets/AssetStoreTools*
+/EarthDefender2D/UnityPackageManager
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+/EarthDefender2D/.consulo/
+/EarthDefender2D/.vs/
+/EarthDefender2D/ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.tmp
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.vscode
+# ====================== #
+# Gradle cache directory #
+# ====================== #
+/EarthDefender2D/.gradle/
+# ============================= #
+# Unity3D generated meta files  #
+# ============================= #
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+# ======================================== #
+# Unity3D generated file on crash reports  #
+# ======================================== #
+sysinfo.txt
+*.stackdump
+# ======================================== #
+# Crashlytics generated file               #
+# ======================================== #
+crashlytics-build.properties
+# ==================== #
+# Builds               #
+# ==================== #
+*.apk
+*.unitypackage
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+# =============== #
+#      Other      #
+# =============== #
+*.blend1
+*.orig
+*.orig.meta
+*.blend1.meta
+# =============== #
+#    Whiteboard   #
+# =============== #
+EarthDefender2D.rar
+EarthDefender2D.7z
+# =============== #
+#       Rider     #
+# =============== #
+/EarthDefender2D/.idea/
