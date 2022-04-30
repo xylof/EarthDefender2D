@@ -25,5 +25,8 @@ public class NormalMeteor : Meteor
 
         if (other.CompareTag("NormalBullet"))
             AddDamage(25f);
+
+        if (other.CompareTag("SuperBullet"))
+            AddDamage(50f);
     }
 }

@@ -10,6 +10,9 @@ TagManager:
   - EarthWall
   - NormalBullet
   - IronBullet
+  - SuperBullet
+  - WeaponBooster
+  - BoostedShip
   layers:
   - Default
   - TransparentFX
