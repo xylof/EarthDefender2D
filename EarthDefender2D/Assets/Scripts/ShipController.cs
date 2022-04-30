@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ShipController : MonoBehaviour
 {
@@ -7,6 +9,14 @@ public class ShipController : MonoBehaviour
 
     [SerializeField]
     private Bullet ironBulletPrefab;
+
+    [SerializeField]
+    private Image hpBar;
+
+    [SerializeField]
+    private TextMeshProUGUI hpText;
+
+    private float hp = 100f;
 
     public void Update()
     {
@@ -40,5 +50,28 @@ public class ShipController : MonoBehaviour
     private Bullet CreateBullet(Bullet bullet)
     {
         return Instantiate(bullet, transform.position + Vector3.right, bullet.transform.rotation);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("NormalMeteor") || other.CompareTag("HardMeteor"))
+        {
+            AddDamage(25f);
+            UpdateUI();
+        }
+    }
+
+    private void AddDamage(float damageValue)
+    {
+        hp -= damageValue;
+
+        if (hp <= 0)
+            Destroy(gameObject);
+    }
+
+    private void UpdateUI()
+    {
+        hpBar.fillAmount = hp / 100f;
+        hpText.text = $"{hp}%";
     }
 }

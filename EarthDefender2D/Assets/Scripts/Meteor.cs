@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public abstract class Meteor : MonoBehaviour
@@ -9,6 +10,14 @@ public abstract class Meteor : MonoBehaviour
 
     [SerializeField]
     private float forceMultiplier;
+
+    protected ScoreSystem scoreSystem;
+
+    private void Start()
+    {
+        GameObject scoreSystemGameObject = GameObject.Find("ScoreSystem");
+        scoreSystem = scoreSystemGameObject.GetComponent<ScoreSystem>();
+    }
 
     public void Move()
     {
