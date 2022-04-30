@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class NormalMeteor : Meteor
 {
+    [SerializeField]
+    private Animator animator;
+
     private float hp = 100f;
 
     private void AddDamage(float damageValue)
@@ -10,8 +13,8 @@ public class NormalMeteor : Meteor
 
         if (hp <= 0)
         {
-            Destroy(gameObject);
-            scoreSystem.UpdateScore(10);
+            LaunchMeteorDestructionAnimation();
+            InvokeRepeating("DestroyMeteor", 0.5f, 0f);
         }
     }
 
@@ -28,5 +31,16 @@ public class NormalMeteor : Meteor
 
         if (other.CompareTag("SuperBullet"))
             AddDamage(50f);
+    }
+
+    private void LaunchMeteorDestructionAnimation()
+    {
+        animator.SetTrigger("MeteorDestruction");
+    }
+
+    private void DestroyMeteor()
+    {
+        Destroy(gameObject);
+        scoreSystem.UpdateScore(10);
     }
 }

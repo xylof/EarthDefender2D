@@ -1193,7 +1193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponBoosterPrefab: {fileID: 4801967998147552726, guid: 6edc5343a3d7a594eaaa32df876b910e, type: 3}
-  weaponBoosterRigidbody: {fileID: -6968441796520661542, guid: 6edc5343a3d7a594eaaa32df876b910e, type: 3}
 --- !u!1 &1725771812
 GameObject:
   m_ObjectHideFlags: 0
