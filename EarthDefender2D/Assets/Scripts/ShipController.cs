@@ -20,6 +20,15 @@ public class ShipController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI hpText;
 
+    [SerializeField]
+    private AudioSource normalAndSuperBulletAudioSource;
+
+    [SerializeField]
+    private AudioSource ironBulletAudioSource;
+
+    [SerializeField]
+    private AudioSource shipDamageAudioSource;
+
     private SpriteRenderer spriteRenderer;
     private float hp = 100f;
     private bool passing = true;
@@ -57,11 +66,14 @@ public class ShipController : MonoBehaviour
                 bulletClone = CreateBullet(superBulletPrefab);
 
             bulletClone.Move();
+            normalAndSuperBulletAudioSource.Play();
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Bullet bulletClone = CreateBullet(ironBulletPrefab);
             bulletClone.Move();
+            ironBulletAudioSource.Play();
+
             StartCoroutine(DestroyIronBallAfterTime(bulletClone));
         }
     }
@@ -97,6 +109,8 @@ public class ShipController : MonoBehaviour
     {
         hp -= damageValue;
         StartCoroutine(ChangeDamagedShipColor());
+
+        shipDamageAudioSource.Play();
 
         if (hp <= 0)
             Destroy(gameObject);

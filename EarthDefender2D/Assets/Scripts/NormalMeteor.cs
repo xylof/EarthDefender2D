@@ -23,7 +23,7 @@ public class NormalMeteor : Meteor
         if (other.CompareTag("EarthWall"))
         {
             Destroy(gameObject);
-            scoreSystem.UpdateScore(-20);
+            scoreSystem.UpdateScore(-50);
         }
 
         if (other.CompareTag("NormalBullet"))

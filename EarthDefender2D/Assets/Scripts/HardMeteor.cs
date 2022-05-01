@@ -7,7 +7,7 @@ public class HardMeteor : Meteor
         if (other.CompareTag("EarthWall"))
         {
             Destroy(gameObject);
-            scoreSystem.UpdateScore(-20);
+            scoreSystem.UpdateScore(-50);
         }
 
         if (other.CompareTag("OrdinaryWall"))
