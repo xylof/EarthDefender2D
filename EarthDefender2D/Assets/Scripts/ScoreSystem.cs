@@ -6,6 +6,11 @@ public class ScoreSystem : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scoreText;
 
+    public int Score
+    {
+        get { return int.Parse(scoreText.text); }
+    }
+
     public void UpdateScore(int pointsToAdd)
     {
         scoreText.text = (int.Parse(scoreText.text) + pointsToAdd).ToString();

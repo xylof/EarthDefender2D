@@ -1063,6 +1063,7 @@ MonoBehaviour:
   normalAndSuperBulletAudioSource: {fileID: 940828414}
   ironBulletAudioSource: {fileID: 940828415}
   shipDamageAudioSource: {fileID: 940828416}
+  scoreSystem: {fileID: 730572561}
 --- !u!50 &940828412
 Rigidbody2D:
   serializedVersion: 4

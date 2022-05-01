@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ShipController : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class ShipController : MonoBehaviour
 
     [SerializeField]
     private AudioSource shipDamageAudioSource;
+
+    [SerializeField]
+    private ScoreSystem scoreSystem;
 
     private SpriteRenderer spriteRenderer;
     private float hp = 100f;
@@ -113,7 +117,10 @@ public class ShipController : MonoBehaviour
         shipDamageAudioSource.Play();
 
         if (hp <= 0)
+        {
             Destroy(gameObject);
+            MoveToLoseScene();
+        }
     }
 
     private IEnumerator ChangeDamagedShipColor()
@@ -156,5 +163,11 @@ public class ShipController : MonoBehaviour
     private void SetShipColor(float r, float g, float b, float a)
     {
         spriteRenderer.color = new Color(r, g, b, a);
+    }
+
+    private void MoveToLoseScene()
+    {
+        ScoreHandler.Score = scoreSystem.Score;
+        SceneManager.LoadScene("LoseScene");
     }
 }
