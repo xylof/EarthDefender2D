@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NormalBullet : Bullet
+public class SuperBullet : Bullet
 {
     private void OnTriggerEnter2D(Collider2D other)
     {

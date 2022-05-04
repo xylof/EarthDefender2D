@@ -10,8 +10,8 @@ public class MeteorsGenerator : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("GenerateNormalMeteor", 1f, 2f);
-        InvokeRepeating("GenerateHardMeteor", 6f, 5f);
+        InvokeRepeating("GenerateNormalMeteor", 1f, 1.5f);
+        InvokeRepeating("GenerateHardMeteor", 6f, 4f);
     }
 
     private void GenerateNormalMeteor()

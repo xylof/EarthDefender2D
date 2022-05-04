@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4915220555319566477}
   - component: {fileID: 1410358862380279965}
   - component: {fileID: 4797752442400310035}
+  - component: {fileID: 416738105}
   m_Layer: 0
   m_Name: Normal Meteor
   m_TagString: NormalMeteor
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3235465187785412517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 3, z: 1}
+  m_LocalPosition: {x: 10, y: -4, z: 1}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,7 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 1410358862380279965}
-  forceMultiplier: 4
+  forceMultiplier: 5
+  animator: {fileID: 416738105}
 --- !u!50 &1410358862380279965
 Rigidbody2D:
   serializedVersion: 4
@@ -158,3 +160,22 @@ PolygonCollider2D:
       - {x: 0.43696102, y: -0.011717871}
       - {x: 0.44098052, y: -0.0062724017}
       - {x: 0.28887352, y: 0.2839708}
+--- !u!95 &416738105
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3235465187785412517}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a036da9a2c74054097d8e6f5abf46c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
